@@ -8,24 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		9817C2612446D80500EDDB90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9817C2602446D80500EDDB90 /* AppDelegate.swift */; };
-		9817C2632446D80500EDDB90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9817C2622446D80500EDDB90 /* SceneDelegate.swift */; };
 		9817C2652446D80500EDDB90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9817C2642446D80500EDDB90 /* ViewController.swift */; };
 		9817C2682446D80500EDDB90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9817C2662446D80500EDDB90 /* Main.storyboard */; };
 		9817C26B2446D80500EDDB90 /* SurfSpringSchoolProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9817C2692446D80500EDDB90 /* SurfSpringSchoolProject.xcdatamodeld */; };
 		9817C26D2446D80B00EDDB90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9817C26C2446D80B00EDDB90 /* Assets.xcassets */; };
 		9817C2702446D80B00EDDB90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9817C26E2446D80B00EDDB90 /* LaunchScreen.storyboard */; };
+		981D2A5C244875FA00DD8D31 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981D2A5B244875FA00DD8D31 /* StatisticsViewController.swift */; };
+		989CE71424491D38003C3F3A /* ImageClassificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989CE71324491D38003C3F3A /* ImageClassificationViewController.swift */; };
+		989CE71624492180003C3F3A /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 989CE71524492180003C3F3A /* MobileNet.mlmodel */; };
+		989CE71824492266003C3F3A /* UIImageOrientation.swift in Resources */ = {isa = PBXBuildFile; fileRef = 989CE71724492266003C3F3A /* UIImageOrientation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9817C25D2446D80500EDDB90 /* SurfSpringSchoolProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfSpringSchoolProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9817C2602446D80500EDDB90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9817C2622446D80500EDDB90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9817C2642446D80500EDDB90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9817C2672446D80500EDDB90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9817C26A2446D80500EDDB90 /* SurfSpringSchoolProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SurfSpringSchoolProject.xcdatamodel; sourceTree = "<group>"; };
 		9817C26C2446D80B00EDDB90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9817C26F2446D80B00EDDB90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9817C2712446D80B00EDDB90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		981D2A5B244875FA00DD8D31 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		989CE71324491D38003C3F3A /* ImageClassificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassificationViewController.swift; sourceTree = "<group>"; };
+		989CE71524492180003C3F3A /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
+		989CE71724492266003C3F3A /* UIImageOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageOrientation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +65,16 @@
 			isa = PBXGroup;
 			children = (
 				9817C2602446D80500EDDB90 /* AppDelegate.swift */,
-				9817C2622446D80500EDDB90 /* SceneDelegate.swift */,
 				9817C2642446D80500EDDB90 /* ViewController.swift */,
 				9817C2662446D80500EDDB90 /* Main.storyboard */,
 				9817C26C2446D80B00EDDB90 /* Assets.xcassets */,
 				9817C26E2446D80B00EDDB90 /* LaunchScreen.storyboard */,
 				9817C2712446D80B00EDDB90 /* Info.plist */,
 				9817C2692446D80500EDDB90 /* SurfSpringSchoolProject.xcdatamodeld */,
+				981D2A5B244875FA00DD8D31 /* StatisticsViewController.swift */,
+				989CE71324491D38003C3F3A /* ImageClassificationViewController.swift */,
+				989CE71524492180003C3F3A /* MobileNet.mlmodel */,
+				989CE71724492266003C3F3A /* UIImageOrientation.swift */,
 			);
 			path = SurfSpringSchoolProject;
 			sourceTree = "<group>";
@@ -131,6 +140,7 @@
 				9817C2702446D80B00EDDB90 /* LaunchScreen.storyboard in Resources */,
 				9817C26D2446D80B00EDDB90 /* Assets.xcassets in Resources */,
 				9817C2682446D80500EDDB90 /* Main.storyboard in Resources */,
+				989CE71824492266003C3F3A /* UIImageOrientation.swift in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +153,10 @@
 			files = (
 				9817C2652446D80500EDDB90 /* ViewController.swift in Sources */,
 				9817C2612446D80500EDDB90 /* AppDelegate.swift in Sources */,
+				989CE71624492180003C3F3A /* MobileNet.mlmodel in Sources */,
 				9817C26B2446D80500EDDB90 /* SurfSpringSchoolProject.xcdatamodeld in Sources */,
-				9817C2632446D80500EDDB90 /* SceneDelegate.swift in Sources */,
+				981D2A5C244875FA00DD8D31 /* StatisticsViewController.swift in Sources */,
+				989CE71424491D38003C3F3A /* ImageClassificationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +303,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 259TPBYQ9Q;
 				INFOPLIST_FILE = SurfSpringSchoolProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +322,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 259TPBYQ9Q;
 				INFOPLIST_FILE = SurfSpringSchoolProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
