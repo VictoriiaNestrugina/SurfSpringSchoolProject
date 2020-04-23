@@ -7,20 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9801D900244F443000E20413 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801D8FF244F443000E20413 /* HistoryTableViewCell.swift */; };
+		9814EBE1245046390087AB64 /* ClassifiedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9814EBE0245046390087AB64 /* ClassifiedImage.swift */; };
 		9817C2612446D80500EDDB90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9817C2602446D80500EDDB90 /* AppDelegate.swift */; };
 		9817C2652446D80500EDDB90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9817C2642446D80500EDDB90 /* ViewController.swift */; };
 		9817C2682446D80500EDDB90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9817C2662446D80500EDDB90 /* Main.storyboard */; };
 		9817C26B2446D80500EDDB90 /* SurfSpringSchoolProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9817C2692446D80500EDDB90 /* SurfSpringSchoolProject.xcdatamodeld */; };
 		9817C26D2446D80B00EDDB90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9817C26C2446D80B00EDDB90 /* Assets.xcassets */; };
 		9817C2702446D80B00EDDB90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9817C26E2446D80B00EDDB90 /* LaunchScreen.storyboard */; };
-		981D2A5C244875FA00DD8D31 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981D2A5B244875FA00DD8D31 /* StatisticsViewController.swift */; };
+		981D2A5C244875FA00DD8D31 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981D2A5B244875FA00DD8D31 /* HistoryViewController.swift */; };
+		984B10AD244C7978002C569C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984B10AC244C7978002C569C /* FeedViewController.swift */; };
 		989CE71424491D38003C3F3A /* ImageClassificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989CE71324491D38003C3F3A /* ImageClassificationViewController.swift */; };
 		989CE71624492180003C3F3A /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 989CE71524492180003C3F3A /* MobileNet.mlmodel */; };
 		989CE71824492266003C3F3A /* UIImageOrientation.swift in Resources */ = {isa = PBXBuildFile; fileRef = 989CE71724492266003C3F3A /* UIImageOrientation.swift */; };
+		98AC18032450DFD90061B955 /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AC18022450DFD90061B955 /* CategoryViewCell.swift */; };
+		98AC180524519B870061B955 /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AC180424519B870061B955 /* NewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9817C25D2446D80500EDDB90 /* SurfSpringSchoolProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfSpringSchoolProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9801D8FF244F443000E20413 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		9814EBE0245046390087AB64 /* ClassifiedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedImage.swift; sourceTree = "<group>"; };
+		9817C25D2446D80500EDDB90 /* Image Classifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Classifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9817C2602446D80500EDDB90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9817C2642446D80500EDDB90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9817C2672446D80500EDDB90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,10 +35,13 @@
 		9817C26C2446D80B00EDDB90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9817C26F2446D80B00EDDB90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9817C2712446D80B00EDDB90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		981D2A5B244875FA00DD8D31 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		981D2A5B244875FA00DD8D31 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		984B10AC244C7978002C569C /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		989CE71324491D38003C3F3A /* ImageClassificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassificationViewController.swift; sourceTree = "<group>"; };
 		989CE71524492180003C3F3A /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		989CE71724492266003C3F3A /* UIImageOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageOrientation.swift; sourceTree = "<group>"; };
+		98AC18022450DFD90061B955 /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
+		98AC180424519B870061B955 /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +66,7 @@
 		9817C25E2446D80500EDDB90 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9817C25D2446D80500EDDB90 /* SurfSpringSchoolProject.app */,
+				9817C25D2446D80500EDDB90 /* Image Classifier.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,15 +76,20 @@
 			children = (
 				9817C2602446D80500EDDB90 /* AppDelegate.swift */,
 				9817C2642446D80500EDDB90 /* ViewController.swift */,
+				989CE71324491D38003C3F3A /* ImageClassificationViewController.swift */,
+				981D2A5B244875FA00DD8D31 /* HistoryViewController.swift */,
+				9801D8FF244F443000E20413 /* HistoryTableViewCell.swift */,
+				984B10AC244C7978002C569C /* FeedViewController.swift */,
+				98AC18022450DFD90061B955 /* CategoryViewCell.swift */,
+				9814EBE0245046390087AB64 /* ClassifiedImage.swift */,
+				989CE71724492266003C3F3A /* UIImageOrientation.swift */,
 				9817C2662446D80500EDDB90 /* Main.storyboard */,
-				9817C26C2446D80B00EDDB90 /* Assets.xcassets */,
 				9817C26E2446D80B00EDDB90 /* LaunchScreen.storyboard */,
+				9817C26C2446D80B00EDDB90 /* Assets.xcassets */,
 				9817C2712446D80B00EDDB90 /* Info.plist */,
 				9817C2692446D80500EDDB90 /* SurfSpringSchoolProject.xcdatamodeld */,
-				981D2A5B244875FA00DD8D31 /* StatisticsViewController.swift */,
-				989CE71324491D38003C3F3A /* ImageClassificationViewController.swift */,
 				989CE71524492180003C3F3A /* MobileNet.mlmodel */,
-				989CE71724492266003C3F3A /* UIImageOrientation.swift */,
+				98AC180424519B870061B955 /* NewTableViewCell.swift */,
 			);
 			path = SurfSpringSchoolProject;
 			sourceTree = "<group>";
@@ -96,7 +111,7 @@
 			);
 			name = SurfSpringSchoolProject;
 			productName = SurfSpringSchoolProject;
-			productReference = 9817C25D2446D80500EDDB90 /* SurfSpringSchoolProject.app */;
+			productReference = 9817C25D2446D80500EDDB90 /* Image Classifier.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -151,12 +166,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98AC18032450DFD90061B955 /* CategoryViewCell.swift in Sources */,
 				9817C2652446D80500EDDB90 /* ViewController.swift in Sources */,
 				9817C2612446D80500EDDB90 /* AppDelegate.swift in Sources */,
+				98AC180524519B870061B955 /* NewTableViewCell.swift in Sources */,
+				9801D900244F443000E20413 /* HistoryTableViewCell.swift in Sources */,
 				989CE71624492180003C3F3A /* MobileNet.mlmodel in Sources */,
 				9817C26B2446D80500EDDB90 /* SurfSpringSchoolProject.xcdatamodeld in Sources */,
-				981D2A5C244875FA00DD8D31 /* StatisticsViewController.swift in Sources */,
+				981D2A5C244875FA00DD8D31 /* HistoryViewController.swift in Sources */,
 				989CE71424491D38003C3F3A /* ImageClassificationViewController.swift in Sources */,
+				984B10AD244C7978002C569C /* FeedViewController.swift in Sources */,
+				9814EBE1245046390087AB64 /* ClassifiedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,13 +323,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 259TPBYQ9Q;
 				INFOPLIST_FILE = SurfSpringSchoolProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Victoriia-Nestrugina.SurfSpringSchoolProject";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Image Classifier";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -322,13 +342,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 259TPBYQ9Q;
 				INFOPLIST_FILE = SurfSpringSchoolProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Victoriia-Nestrugina.SurfSpringSchoolProject";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Image Classifier";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

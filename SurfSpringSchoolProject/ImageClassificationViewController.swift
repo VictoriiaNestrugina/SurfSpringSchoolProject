@@ -12,7 +12,7 @@ import Vision
 import ImageIO
 
 class ImageClassificationViewController: UIViewController {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var classificationLabel: UILabel!
@@ -21,6 +21,7 @@ class ImageClassificationViewController: UIViewController {
         //super.viewDidLoad()
         classificationLabel.layer.masksToBounds = true
         classificationLabel.layer.cornerRadius = 10
+        //viewWithClassificationLabel.layer.cornerRadius = 10
     }
     
     lazy var classificationRequest: VNCoreMLRequest = {
@@ -108,6 +109,11 @@ class ImageClassificationViewController: UIViewController {
         picker.delegate = self
         picker.sourceType = sourceType
         present(picker, animated: true)
+    }
+    
+    @IBAction func close(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+        print(" Closed")
     }
     
     /*
