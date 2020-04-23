@@ -22,6 +22,7 @@
 		989CE71824492266003C3F3A /* UIImageOrientation.swift in Resources */ = {isa = PBXBuildFile; fileRef = 989CE71724492266003C3F3A /* UIImageOrientation.swift */; };
 		98AC18032450DFD90061B955 /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AC18022450DFD90061B955 /* CategoryViewCell.swift */; };
 		98AC180524519B870061B955 /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AC180424519B870061B955 /* NewTableViewCell.swift */; };
+		98AC180724519C3C0061B955 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AC180624519C3C0061B955 /* BaseService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		989CE71724492266003C3F3A /* UIImageOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageOrientation.swift; sourceTree = "<group>"; };
 		98AC18022450DFD90061B955 /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
 		98AC180424519B870061B955 /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
+		98AC180624519C3C0061B955 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				9801D8FF244F443000E20413 /* HistoryTableViewCell.swift */,
 				984B10AC244C7978002C569C /* FeedViewController.swift */,
 				98AC18022450DFD90061B955 /* CategoryViewCell.swift */,
+				98AC180424519B870061B955 /* NewTableViewCell.swift */,
 				9814EBE0245046390087AB64 /* ClassifiedImage.swift */,
 				989CE71724492266003C3F3A /* UIImageOrientation.swift */,
 				9817C2662446D80500EDDB90 /* Main.storyboard */,
@@ -89,7 +92,7 @@
 				9817C2712446D80B00EDDB90 /* Info.plist */,
 				9817C2692446D80500EDDB90 /* SurfSpringSchoolProject.xcdatamodeld */,
 				989CE71524492180003C3F3A /* MobileNet.mlmodel */,
-				98AC180424519B870061B955 /* NewTableViewCell.swift */,
+				98AC180624519C3C0061B955 /* BaseService.swift */,
 			);
 			path = SurfSpringSchoolProject;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				989CE71624492180003C3F3A /* MobileNet.mlmodel in Sources */,
 				9817C26B2446D80500EDDB90 /* SurfSpringSchoolProject.xcdatamodeld in Sources */,
 				981D2A5C244875FA00DD8D31 /* HistoryViewController.swift in Sources */,
+				98AC180724519C3C0061B955 /* BaseService.swift in Sources */,
 				989CE71424491D38003C3F3A /* ImageClassificationViewController.swift in Sources */,
 				984B10AD244C7978002C569C /* FeedViewController.swift in Sources */,
 				9814EBE1245046390087AB64 /* ClassifiedImage.swift in Sources */,

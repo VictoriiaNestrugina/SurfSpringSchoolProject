@@ -11,11 +11,10 @@ import UIKit
 
 class ClassifiedImage {
     var image: UIImage
-    var description: String
+    var info: String
     
     init(image: UIImage, description: String) {
         self.image = image
-        self.description = description
+        self.info = description
     }
-    
 }

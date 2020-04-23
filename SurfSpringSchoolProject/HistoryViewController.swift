@@ -17,18 +17,28 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var emptyStateLabel2: UILabel!
     
     var savedImages: [ClassifiedImage] = []
+    var newImage: ClassifiedImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let image = newImage {
+            savedImages.append(image)
+        }
+        
         //We are setting the source of data
         tableView.dataSource = self
         tableView.delegate = self
+        
+        //Used for UITableViewController
+        //navigationItem.rightBarButtonItem = editButtonItem
+        
         //Used to point that we can reuse a cell, useless if you use Interface builder
         //tableView.register(UITableViewCell.self, forCellReuseIdentifier: "simpleCell")
-        // Do any additional setup after loading the view.
         
-        //Добавить инициализацию savedImages
-        savedImages = fillHistoryArray()
+        //Initialize savedImages - for debug purposes only
+        //savedImages = fillHistoryArray()
+        
         if savedImages.isEmpty {
             tableView.isHidden = true
         } else {
@@ -41,14 +51,20 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        print("disappiaring")
+    }
+    
+    //For debug purposes only
     func fillHistoryArray() -> [ClassifiedImage] {
         var tempClassifiedImageArray: [ClassifiedImage] = []
-        var classifiedImage = ClassifiedImage(image: UIImage(named: "images")!, description: "Description")
+        let classifiedImage = ClassifiedImage(image: UIImage(named: "images")!, description: "Description")
         for _ in 0...9 {
             tempClassifiedImageArray.append(classifiedImage)
         }
         return tempClassifiedImageArray
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return savedImages.count
@@ -60,18 +76,19 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.cellView.layer.cornerRadius = 15
         cell.analyzedImage.layer.cornerRadius = 15
         cell.analyzedImage.image = classifiedImage.image
-        cell.imageDescription.text = classifiedImage.description
+        cell.imageDescription.text = classifiedImage.info
         return cell
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //Editing mode - deleting cells
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            savedImages.remove(at: indexPath.row)
+            //Deleting a row - not a very good style:
+            //tableView.reloadData()
+            //Best solution, comes with animation
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
-    */
 
 }
