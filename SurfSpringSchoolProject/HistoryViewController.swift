@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class HistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -17,27 +18,25 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var emptyStateLabel2: UILabel!
     
     var savedImages: [ClassifiedImage] = []
-    var newImage: ClassifiedImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let image = newImage {
-            savedImages.append(image)
-        }
-        
         //We are setting the source of data
         tableView.dataSource = self
         tableView.delegate = self
-        
-        //Used for UITableViewController
-        //navigationItem.rightBarButtonItem = editButtonItem
-        
-        //Used to point that we can reuse a cell, useless if you use Interface builder
-        //tableView.register(UITableViewCell.self, forCellReuseIdentifier: "simpleCell")
-        
-        //Initialize savedImages - for debug purposes only
-        //savedImages = fillHistoryArray()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = ClassifiedImage.fetchRequest() as NSFetchRequest<ClassifiedImage>
+        do {
+            savedImages = try context.fetch(fetchRequest)
+        } catch let error {
+            print("Couldn't load the data. Error \(error)")
+        }
         
         if savedImages.isEmpty {
             tableView.isHidden = true
@@ -48,21 +47,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
             emptyStateLabel2.isHidden = true
         }
         
-        
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        print("disappiaring")
-    }
-    
-    //For debug purposes only
-    func fillHistoryArray() -> [ClassifiedImage] {
-        var tempClassifiedImageArray: [ClassifiedImage] = []
-        let classifiedImage = ClassifiedImage(image: UIImage(named: "images")!, description: "Description")
-        for _ in 0...9 {
-            tempClassifiedImageArray.append(classifiedImage)
-        }
-        return tempClassifiedImageArray
+        tableView.reloadData()
     }
     
     
@@ -75,7 +60,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         let cell = tableView.dequeueReusableCell(withIdentifier: "simpleCell", for: indexPath) as! HistoryTableViewCell
         cell.cellView.layer.cornerRadius = 15
         cell.analyzedImage.layer.cornerRadius = 15
-        cell.analyzedImage.image = classifiedImage.image
+        cell.analyzedImage.image = UIImage(data: classifiedImage.image!)
         cell.imageDescription.text = classifiedImage.info
         return cell
     }
@@ -83,7 +68,20 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     //Editing mode - deleting cells
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            //Delete from Core Data
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            
+            let imageToDelete = savedImages[indexPath.row]
+            context.delete(imageToDelete)
             savedImages.remove(at: indexPath.row)
+            
+            do {
+                try context.save()
+            } catch let error {
+                print("Couldn't save the context. Error \(error)")
+            }
+            
             //Deleting a row - not a very good style:
             //tableView.reloadData()
             //Best solution, comes with animation

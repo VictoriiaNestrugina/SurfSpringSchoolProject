@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreData
 import CoreML
 import Vision
 import ImageIO
+
 
 class ImageClassificationViewController: UIViewController {
     
@@ -28,6 +30,7 @@ class ImageClassificationViewController: UIViewController {
         image = image ?? UIImage(named: "somethingWentWrong")!
         imageView.image = image
         updateClassifications(for: image!)
+        
     }
     
     lazy var classificationRequest: VNCoreMLRequest = {
@@ -83,63 +86,28 @@ class ImageClassificationViewController: UIViewController {
                 }
                 self.classificationLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
                 self.info = descriptions.joined(separator: "\n")
+                self.saveClassifiedImage()
             }
         }
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        let tbc = segue.destination as! UITabBarController
-        let dvc = tbc.viewControllers!.first as! HistoryViewController
-        let imageToPass = ClassifiedImage(image: image!, description: info!)
-        dvc.newImage = imageToPass
+    func saveClassifiedImage() {
+        //Work with Core Date
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let newImage = ClassifiedImage(context: context)
+        newImage.info = info!
+        newImage.image = image?.pngData()
+        newImage.imageId = UUID().uuidString
+        
+        //Error check. Must be in a do statement.
+        do {
+            try context.save()
+        } catch let error {
+            print("Error while saving an image. Error code \(error).")
+        }
         
     }
-    
-//    // Photo Actions
-//    @IBAction func takePicture(_ sender: UIBarButtonItem) {
-//        // Show options for the source picker only if the camera is available.
-//        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
-//            presentPhotoPicker(sourceType: .photoLibrary)
-//            return
-//        }
-//
-//        let photoSourcePicker = UIAlertController()
-//        let takePhoto = UIAlertAction(title: "Take Photo", style: .default) { [unowned self] _ in
-//            self.presentPhotoPicker(sourceType: .camera)
-//        }
-//        let choosePhoto = UIAlertAction(title: "Choose Photo", style: .default) { [unowned self] _ in
-//            self.presentPhotoPicker(sourceType: .photoLibrary)
-//        }
-//
-//        photoSourcePicker.addAction(takePhoto)
-//        photoSourcePicker.addAction(choosePhoto)
-//        photoSourcePicker.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-//
-//        present(photoSourcePicker, animated: true)
-//    }
-//
-//    func presentPhotoPicker(sourceType: UIImagePickerController.SourceType) {
-//        let picker = UIImagePickerController()
-//        picker.delegate = self
-//        picker.sourceType = sourceType
-//        present(picker, animated: true)
-//    }
-
 }
-
-//extension ImageClassificationViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-//
-//    //Handling Image Picker Selection
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        picker.dismiss(animated: true)
-//
-//        // We always expect `imagePickerController(:didFinishPickingMediaWithInfo:)` to supply the original image.
-//        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-//        imageView.image = image
-//        updateClassifications(for: image)
-//    }
-//
-//}

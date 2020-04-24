@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9801D900244F443000E20413 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801D8FF244F443000E20413 /* HistoryTableViewCell.swift */; };
-		9814EBE1245046390087AB64 /* ClassifiedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9814EBE0245046390087AB64 /* ClassifiedImage.swift */; };
 		9817C2612446D80500EDDB90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9817C2602446D80500EDDB90 /* AppDelegate.swift */; };
 		9817C2652446D80500EDDB90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9817C2642446D80500EDDB90 /* ViewController.swift */; };
 		9817C2682446D80500EDDB90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9817C2662446D80500EDDB90 /* Main.storyboard */; };
@@ -27,7 +26,6 @@
 
 /* Begin PBXFileReference section */
 		9801D8FF244F443000E20413 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
-		9814EBE0245046390087AB64 /* ClassifiedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedImage.swift; sourceTree = "<group>"; };
 		9817C25D2446D80500EDDB90 /* Image Classifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Classifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9817C2602446D80500EDDB90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9817C2642446D80500EDDB90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 				984B10AC244C7978002C569C /* FeedViewController.swift */,
 				98AC18022450DFD90061B955 /* CategoryViewCell.swift */,
 				98AC180424519B870061B955 /* NewTableViewCell.swift */,
-				9814EBE0245046390087AB64 /* ClassifiedImage.swift */,
 				989CE71724492266003C3F3A /* UIImageOrientation.swift */,
 				9817C2662446D80500EDDB90 /* Main.storyboard */,
 				9817C26E2446D80B00EDDB90 /* LaunchScreen.storyboard */,
@@ -180,7 +177,6 @@
 				98AC180724519C3C0061B955 /* BaseService.swift in Sources */,
 				989CE71424491D38003C3F3A /* ImageClassificationViewController.swift in Sources */,
 				984B10AD244C7978002C569C /* FeedViewController.swift in Sources */,
-				9814EBE1245046390087AB64 /* ClassifiedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
