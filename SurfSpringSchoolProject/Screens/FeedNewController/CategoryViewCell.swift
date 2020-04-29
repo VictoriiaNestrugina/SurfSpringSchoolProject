@@ -9,12 +9,11 @@
 import UIKit
 
 class CategoryViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        
     }
 }

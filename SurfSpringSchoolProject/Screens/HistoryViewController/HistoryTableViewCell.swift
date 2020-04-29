@@ -16,13 +16,18 @@ class HistoryTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        cellView.layer.cornerRadius = 15
+        analyzedImage.layer.cornerRadius = 15
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        contentView.backgroundColor = .white
+        if selected {
+            cellView.backgroundColor = UIColor(red: 0.749, green: 0.854, blue: 0.949, alpha: 1)
+        } else {
+            cellView.backgroundColor = UIColor(red: 240/255, green: 242/255, blue: 250/255, alpha: 1)
+        }
+        
     }
-
 }

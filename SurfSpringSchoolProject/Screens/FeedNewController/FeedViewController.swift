@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate  {
+class FeedViewController: UIViewController, UITableViewDelegate, UICollectionViewDelegate  {
     
     @IBOutlet weak var sectionCollectionView: UICollectionView!
     @IBOutlet weak var newImagesTableView: UITableView!
@@ -20,13 +20,14 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         newImagesTableView.dataSource = self
         newImagesTableView.delegate = self
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func backButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
+}
+
+extension FeedViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
@@ -37,6 +38,9 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         return cell
     }
+}
+
+extension FeedViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
@@ -47,14 +51,4 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.layer.cornerRadius = 15
         return cell
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

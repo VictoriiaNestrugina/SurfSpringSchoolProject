@@ -6,12 +6,11 @@
 //  Copyright © 2020 Victoriia Nestrugina. All rights reserved.
 //
 
-import UIKit
 import CoreData
 import CoreML
-import Vision
 import ImageIO
-
+import UIKit
+import Vision
 
 class ImageClassificationViewController: UIViewController {
     
@@ -19,18 +18,15 @@ class ImageClassificationViewController: UIViewController {
     var info: String?
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var classificationLabel: UILabel!
     
-    
     override func viewDidLoad() {
-        //super.viewDidLoad()
+        
         classificationLabel.layer.masksToBounds = true
         classificationLabel.layer.cornerRadius = 10
-        image = image ?? UIImage(named: "somethingWentWrong")!
+        
         imageView.image = image
         updateClassifications(for: image!)
-        
     }
     
     lazy var classificationRequest: VNCoreMLRequest = {
@@ -91,7 +87,6 @@ class ImageClassificationViewController: UIViewController {
         }
     }
     
-    
     func saveClassifiedImage() {
         //Work with Core Date
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -99,7 +94,7 @@ class ImageClassificationViewController: UIViewController {
         
         let newImage = ClassifiedImage(context: context)
         newImage.info = info!
-        newImage.image = image?.pngData()
+        newImage.image = image?.jpegData(compressionQuality: 1.0) //?.pngData()
         newImage.imageId = UUID().uuidString
         
         //Error check. Must be in a do statement.
@@ -108,6 +103,5 @@ class ImageClassificationViewController: UIViewController {
         } catch let error {
             print("Error while saving an image. Error code \(error).")
         }
-        
     }
 }

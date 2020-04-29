@@ -1,5 +1,5 @@
-import UIKit
 import ImageIO
+import UIKit
 
 extension CGImagePropertyOrientation {
     /**
@@ -7,7 +7,6 @@ extension CGImagePropertyOrientation {
      `CGImagePropertyOrientation`. The cases for each
      orientation are represented by different raw values.
      
-     - Tag: ConvertOrientation
      */
     init(_ orientation: UIImageOrientation) {
         switch orientation {
