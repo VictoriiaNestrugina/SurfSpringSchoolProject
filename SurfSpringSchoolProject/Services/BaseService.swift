@@ -10,6 +10,8 @@ import Foundation
 
 enum NetworkConstants {
     static let accessKey = "tdyEZYQXoRNdAOJUW1hzrltncM9_IN_jhDW74WTW084"
+    static let newURL = "/photos?client_id="
+    static let randomURL = "/photos/random?count=1&client_id="
     static let baseURL = "https://api.unsplash.com"
 }
 
@@ -20,8 +22,15 @@ enum ServerError: Error {
 
 class BaseService {
     
-    func loadPhotos(onComplete: @escaping ([PhotoModel]) -> Void, onError: @escaping (Error) -> Void) {
-        let urlString = NetworkConstants.baseURL + "/photos/random?count=1&client_id=" + NetworkConstants.accessKey
+    func loadPhotos(isRandom: Bool, onComplete: @escaping ([PhotoModel]) -> Void, onError: @escaping (Error) -> Void) {
+        let urlString: String
+        
+        if isRandom {
+            urlString = NetworkConstants.baseURL + NetworkConstants.randomURL + NetworkConstants.accessKey
+        } else {
+            urlString = NetworkConstants.baseURL + NetworkConstants.newURL + NetworkConstants.accessKey
+        }
+        
         let url = URL(string: urlString)!
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in

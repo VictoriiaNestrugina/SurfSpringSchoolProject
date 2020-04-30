@@ -38,6 +38,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate {
         //Attaching the search bar to navigation bar
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.hidesNavigationBarDuringPresentation = false
         definesPresentationContext = true
     }
     

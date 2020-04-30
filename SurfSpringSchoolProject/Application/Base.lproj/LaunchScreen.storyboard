@@ -15,12 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="computer-vision-decision-eye-machine-ai-512" translatesAutoresizingMaskIntoConstraints="NO" id="qbO-EU-llN">
-                                <rect key="frame" x="83" y="246" width="248" height="205"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenImage" translatesAutoresizingMaskIntoConstraints="NO" id="qbO-EU-llN">
+                                <rect key="frame" x="20" y="-34.5" width="374" height="965"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qbO-EU-llN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="VOX-me-6rr"/>
+                            <constraint firstItem="qbO-EU-llN" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="dHa-3E-Mx6"/>
+                            <constraint firstAttribute="trailing" secondItem="qbO-EU-llN" secondAttribute="trailing" constant="20" id="sYk-Yy-VP5"/>
+                            <constraint firstItem="qbO-EU-llN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ulC-st-5G1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -30,6 +35,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="computer-vision-decision-eye-machine-ai-512" width="512" height="512"/>
+        <image name="launchScreenImage" width="1039" height="965"/>
     </resources>
 </document>

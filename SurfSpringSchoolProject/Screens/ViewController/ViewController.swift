@@ -18,14 +18,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         let service = BaseService()
-        service.loadPhotos(onComplete: { [weak self] (photos) in
+        service.loadPhotos(isRandom: true, onComplete: { [weak self] (photos) in
             self?.photos = photos
         }) { (error) in
             print(error.localizedDescription)
         }
         print(self.photos.count)
-        
-        
     }
     
     func presentPhotoPicker(sourceType: UIImagePickerController.SourceType) {
@@ -46,7 +44,6 @@ class ViewController: UIViewController {
 
     
     @IBAction func downloadRandomFromUnsplash(_ sender: UIButton) {
-    
         let model = photos[0]
         let url = URL(string: model.urls.regular)!
         //do loading from the given URL
