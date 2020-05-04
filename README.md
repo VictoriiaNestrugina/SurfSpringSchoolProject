@@ -4,10 +4,10 @@
 С помощью open-source MobileNet CoreML модели приложение классифицирует изображение, используя 1000 категорий.
 Изображение берется с камеры телефона, его памяти или с Unsplash.
 
-![](/Demo/classifyFromDevice.gif)
-![](/Demo/classifyFromUnsplash.gif)
-![](/Demo/deletingCells.gif)
-![](/Demo/historySearch.gif)
+![](/Demo/classifyFromDevice.gif =200x)
+![](/Demo/classifyFromUnsplash.gif =200x)
+![](/Demo/deletingCells.gif =200x)
+![](/Demo/historySearch.gif =200x)
 
 ## Требования
 ### Обязательные фичи
