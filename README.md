@@ -5,10 +5,9 @@
 Изображение берется с камеры телефона, его памяти или с Unsplash.
 
 <img src="/Demo/classifyFromDevice.gif" alt="drawing" width="200"/>
-![](/Demo/classifyFromDevice.gif =200x)
-![](/Demo/classifyFromUnsplash.gif =200x)
-![](/Demo/deletingCells.gif =200x)
-![](/Demo/historySearch.gif =200x)
+<img src="/Demo/classifyFromUnsplash.gif" alt="drawing" width="200"/>
+<img src="/Demo/deletingCells.gif" alt="drawing" width="200"/>
+<img src="/Demo/historySearch.gif" alt="drawing" width="200"/>
 
 ## Требования
 ### Обязательные фичи
