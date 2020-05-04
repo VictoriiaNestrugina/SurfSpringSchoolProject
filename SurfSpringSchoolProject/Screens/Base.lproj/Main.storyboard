@@ -480,10 +480,11 @@
                                     </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="X7s-wo-kpE">
-                                    <rect key="frame" x="-106" y="374" width="415" height="300"/>
+                                    <rect key="frame" x="-107.5" y="374" width="415" height="300"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="300" id="5jV-Pw-n4V"/>
+                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="415" id="afq-tq-8Yj"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inc-S0-yfl">
@@ -495,7 +496,6 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="X7s-wo-kpE" firstAttribute="leading" secondItem="b9R-3G-mB5" secondAttribute="leading" constant="-106" id="4KM-c1-Xl8"/>
                                 <constraint firstItem="Inc-S0-yfl" firstAttribute="centerX" secondItem="b9R-3G-mB5" secondAttribute="centerX" id="7fz-lg-6st"/>
                                 <constraint firstItem="Kcg-fm-qG0" firstAttribute="top" secondItem="b9R-3G-mB5" secondAttribute="top" id="CTJ-uT-bbX"/>
                                 <constraint firstItem="qHc-uO-0RE" firstAttribute="top" secondItem="dHM-In-4mF" secondAttribute="bottom" constant="300" id="M9b-0O-XFC"/>
@@ -505,13 +505,13 @@
                                 <constraint firstItem="Inc-S0-yfl" firstAttribute="top" secondItem="Kcg-fm-qG0" secondAttribute="bottom" constant="310" id="Pwv-cp-R4v"/>
                                 <constraint firstItem="qHc-uO-0RE" firstAttribute="leading" secondItem="b9R-3G-mB5" secondAttribute="leading" constant="-1" id="Rb8-4B-ROY"/>
                                 <constraint firstItem="tyJ-wY-JjL" firstAttribute="leading" secondItem="b9R-3G-mB5" secondAttribute="leading" constant="-106" id="UyD-Qd-0H2"/>
-                                <constraint firstAttribute="trailing" secondItem="X7s-wo-kpE" secondAttribute="trailing" constant="-109" id="X2f-NJ-bx0"/>
                                 <constraint firstAttribute="bottom" secondItem="Kcg-fm-qG0" secondAttribute="bottom" id="Zoe-io-ePX"/>
                                 <constraint firstItem="Kcg-fm-qG0" firstAttribute="leading" secondItem="b9R-3G-mB5" secondAttribute="leading" id="a7b-pg-WC3"/>
                                 <constraint firstItem="dHM-In-4mF" firstAttribute="centerX" secondItem="b9R-3G-mB5" secondAttribute="centerX" id="cA3-6E-jET"/>
                                 <constraint firstItem="X7s-wo-kpE" firstAttribute="top" secondItem="Kcg-fm-qG0" secondAttribute="bottom" constant="330" id="jGL-qx-KKS"/>
                                 <constraint firstAttribute="trailing" secondItem="Kcg-fm-qG0" secondAttribute="trailing" id="pMu-iI-5Df"/>
                                 <constraint firstItem="dHM-In-4mF" firstAttribute="top" secondItem="Kcg-fm-qG0" secondAttribute="bottom" constant="170" id="w8q-Xt-rfS"/>
+                                <constraint firstItem="X7s-wo-kpE" firstAttribute="centerX" secondItem="b9R-3G-mB5" secondAttribute="centerX" id="wNf-48-jQq"/>
                                 <constraint firstAttribute="trailing" secondItem="qHc-uO-0RE" secondAttribute="trailing" constant="-1" id="xqr-3B-eEl"/>
                             </constraints>
                         </view>

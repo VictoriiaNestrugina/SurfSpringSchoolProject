@@ -58,6 +58,7 @@ class BaseService {
         let modifiedQuery = modifyQuery(query: query)
         let urlString: String = NetworkConstants.baseURL + NetworkConstants.searchURL + String(pageNumber)
             + "&query=" + modifiedQuery + "&client_id=" + NetworkConstants.accessKey
+        
         let url = URL(string: urlString)!
 
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -88,12 +89,28 @@ class BaseService {
     func modifyQuery(query: String) -> String {
         let forbiddenLiterals = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "\\", "|", "/", " ",
                                 ".", "_", "~", ":", "?", "#", "[", "]", "'", "*", "+", ",", ";", "=", "<", ">"]
+        let russianAlphabet = ["а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л",
+                               "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш",
+                               "щ", "ъ", "ы", "ь", "э", "ю", "я"]
+        
         var modifiedQuery = query
+        var isInEnglish = true
+        var i = 0
         
         for literal in forbiddenLiterals {
             modifiedQuery = modifiedQuery.replacingOccurrences(of: literal, with: "+", options: .literal, range: nil)
         }
         
+        while isInEnglish && i < russianAlphabet.count {
+            if modifiedQuery.contains(russianAlphabet[i]) {
+                isInEnglish = false
+            } else {
+                i += 1
+            }
+        }
+        if !isInEnglish {
+            modifiedQuery = ""
+        }
         return modifiedQuery
     }
 }

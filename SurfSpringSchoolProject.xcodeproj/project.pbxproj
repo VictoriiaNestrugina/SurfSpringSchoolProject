@@ -23,6 +23,10 @@
 		98A627772452CB4B00344AB9 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A627762452CB4B00344AB9 /* PhotoModel.swift */; };
 		98AC180524519B870061B955 /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AC180424519B870061B955 /* NewTableViewCell.swift */; };
 		98AC180724519C3C0061B955 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AC180624519C3C0061B955 /* BaseService.swift */; };
+		98B3E47224609C9C004B16EE /* classifyFromUnsplash.gif in Resources */ = {isa = PBXBuildFile; fileRef = 98B3E47024609C9B004B16EE /* classifyFromUnsplash.gif */; };
+		98B3E47324609C9C004B16EE /* classifyFromDevice.gif in Resources */ = {isa = PBXBuildFile; fileRef = 98B3E47124609C9B004B16EE /* classifyFromDevice.gif */; };
+		98B3E47524609CFB004B16EE /* historySearch.gif in Resources */ = {isa = PBXBuildFile; fileRef = 98B3E47424609CFB004B16EE /* historySearch.gif */; };
+		98B3E47724609D0E004B16EE /* deletingCells.gif in Resources */ = {isa = PBXBuildFile; fileRef = 98B3E47624609D0D004B16EE /* deletingCells.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		98A627762452CB4B00344AB9 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		98AC180424519B870061B955 /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
 		98AC180624519C3C0061B955 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		98B3E47024609C9B004B16EE /* classifyFromUnsplash.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = classifyFromUnsplash.gif; sourceTree = "<group>"; };
+		98B3E47124609C9B004B16EE /* classifyFromDevice.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = classifyFromDevice.gif; sourceTree = "<group>"; };
+		98B3E47424609CFB004B16EE /* historySearch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = historySearch.gif; sourceTree = "<group>"; };
+		98B3E47624609D0D004B16EE /* deletingCells.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = deletingCells.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 			children = (
 				9817C25F2446D80500EDDB90 /* SurfSpringSchoolProject */,
 				9817C25E2446D80500EDDB90 /* Products */,
+				98B3E46F24609C45004B16EE /* Demo */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +104,17 @@
 				986117B0245CB3F4000A21B6 /* UIImageView.swift */,
 			);
 			path = UnsplashViewController;
+			sourceTree = "<group>";
+		};
+		98B3E46F24609C45004B16EE /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				98B3E47124609C9B004B16EE /* classifyFromDevice.gif */,
+				98B3E47024609C9B004B16EE /* classifyFromUnsplash.gif */,
+				98B3E47424609CFB004B16EE /* historySearch.gif */,
+				98B3E47624609D0D004B16EE /* deletingCells.gif */,
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 		98D85B7D2459EB8B00197DDB /* Services */ = {
@@ -244,6 +264,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9817C2702446D80B00EDDB90 /* LaunchScreen.storyboard in Resources */,
+				98B3E47224609C9C004B16EE /* classifyFromUnsplash.gif in Resources */,
+				98B3E47324609C9C004B16EE /* classifyFromDevice.gif in Resources */,
+				98B3E47524609CFB004B16EE /* historySearch.gif in Resources */,
+				98B3E47724609D0E004B16EE /* deletingCells.gif in Resources */,
 				9817C26D2446D80B00EDDB90 /* Assets.xcassets in Resources */,
 				9817C2682446D80500EDDB90 /* Main.storyboard in Resources */,
 				989CE71824492266003C3F3A /* UIImageOrientation.swift in Resources */,
