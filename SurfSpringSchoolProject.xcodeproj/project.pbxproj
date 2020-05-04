@@ -15,12 +15,12 @@
 		9817C26D2446D80B00EDDB90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9817C26C2446D80B00EDDB90 /* Assets.xcassets */; };
 		9817C2702446D80B00EDDB90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9817C26E2446D80B00EDDB90 /* LaunchScreen.storyboard */; };
 		981D2A5C244875FA00DD8D31 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981D2A5B244875FA00DD8D31 /* HistoryViewController.swift */; };
-		984B10AD244C7978002C569C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984B10AC244C7978002C569C /* FeedViewController.swift */; };
+		986117B1245CB3F4000A21B6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986117B0245CB3F4000A21B6 /* UIImageView.swift */; };
+		986117B4245D9990000A21B6 /* UnsplashTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986117B3245D9990000A21B6 /* UnsplashTableViewController.swift */; };
 		989CE71424491D38003C3F3A /* ImageClassificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989CE71324491D38003C3F3A /* ImageClassificationViewController.swift */; };
 		989CE71624492180003C3F3A /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 989CE71524492180003C3F3A /* MobileNet.mlmodel */; };
 		989CE71824492266003C3F3A /* UIImageOrientation.swift in Resources */ = {isa = PBXBuildFile; fileRef = 989CE71724492266003C3F3A /* UIImageOrientation.swift */; };
 		98A627772452CB4B00344AB9 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A627762452CB4B00344AB9 /* PhotoModel.swift */; };
-		98AC18032450DFD90061B955 /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AC18022450DFD90061B955 /* CategoryViewCell.swift */; };
 		98AC180524519B870061B955 /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AC180424519B870061B955 /* NewTableViewCell.swift */; };
 		98AC180724519C3C0061B955 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AC180624519C3C0061B955 /* BaseService.swift */; };
 /* End PBXBuildFile section */
@@ -36,12 +36,12 @@
 		9817C26F2446D80B00EDDB90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9817C2712446D80B00EDDB90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		981D2A5B244875FA00DD8D31 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		984B10AC244C7978002C569C /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		986117B0245CB3F4000A21B6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		986117B3245D9990000A21B6 /* UnsplashTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashTableViewController.swift; sourceTree = "<group>"; };
 		989CE71324491D38003C3F3A /* ImageClassificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassificationViewController.swift; sourceTree = "<group>"; };
 		989CE71524492180003C3F3A /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		989CE71724492266003C3F3A /* UIImageOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageOrientation.swift; sourceTree = "<group>"; };
 		98A627762452CB4B00344AB9 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
-		98AC18022450DFD90061B955 /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
 		98AC180424519B870061B955 /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
 		98AC180624519C3C0061B955 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +87,16 @@
 			path = SurfSpringSchoolProject;
 			sourceTree = "<group>";
 		};
+		986117B2245D995E000A21B6 /* UnsplashViewController */ = {
+			isa = PBXGroup;
+			children = (
+				986117B3245D9990000A21B6 /* UnsplashTableViewController.swift */,
+				98AC180424519B870061B955 /* NewTableViewCell.swift */,
+				986117B0245CB3F4000A21B6 /* UIImageView.swift */,
+			);
+			path = UnsplashViewController;
+			sourceTree = "<group>";
+		};
 		98D85B7D2459EB8B00197DDB /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,7 +126,7 @@
 		98D85B812459EDA800197DDB /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				98D85B852459EE2900197DDB /* FeedNewController */,
+				986117B2245D995E000A21B6 /* UnsplashViewController */,
 				98D85B842459EE1800197DDB /* HistoryViewController */,
 				98D85B832459EDFB00197DDB /* ImageClassificationViewController */,
 				98D85B822459EDE000197DDB /* ViewController */,
@@ -148,16 +158,6 @@
 				9801D8FF244F443000E20413 /* HistoryTableViewCell.swift */,
 			);
 			path = HistoryViewController;
-			sourceTree = "<group>";
-		};
-		98D85B852459EE2900197DDB /* FeedNewController */ = {
-			isa = PBXGroup;
-			children = (
-				984B10AC244C7978002C569C /* FeedViewController.swift */,
-				98AC18022450DFD90061B955 /* CategoryViewCell.swift */,
-				98AC180424519B870061B955 /* NewTableViewCell.swift */,
-			);
-			path = FeedNewController;
 			sourceTree = "<group>";
 		};
 		98D85B872459EFFC00197DDB /* Models */ = {
@@ -257,9 +257,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98AC18032450DFD90061B955 /* CategoryViewCell.swift in Sources */,
 				9817C2652446D80500EDDB90 /* ViewController.swift in Sources */,
 				9817C2612446D80500EDDB90 /* AppDelegate.swift in Sources */,
+				986117B1245CB3F4000A21B6 /* UIImageView.swift in Sources */,
 				98AC180524519B870061B955 /* NewTableViewCell.swift in Sources */,
 				9801D900244F443000E20413 /* HistoryTableViewCell.swift in Sources */,
 				989CE71624492180003C3F3A /* MobileNet.mlmodel in Sources */,
@@ -267,8 +267,8 @@
 				9817C26B2446D80500EDDB90 /* SurfSpringSchoolProject.xcdatamodeld in Sources */,
 				981D2A5C244875FA00DD8D31 /* HistoryViewController.swift in Sources */,
 				98AC180724519C3C0061B955 /* BaseService.swift in Sources */,
+				986117B4245D9990000A21B6 /* UnsplashTableViewController.swift in Sources */,
 				989CE71424491D38003C3F3A /* ImageClassificationViewController.swift in Sources */,
-				984B10AD244C7978002C569C /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

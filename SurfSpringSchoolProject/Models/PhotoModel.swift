@@ -17,3 +17,8 @@ struct PhotoModel: Codable {
     let description: String?
     let urls: UrlsModels
 }
+
+struct SearchResult: Codable {
+    let total_pages: Int
+    let results: [PhotoModel]?
+}

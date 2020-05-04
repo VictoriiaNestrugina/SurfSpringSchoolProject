@@ -10,20 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+   
+    @IBOutlet weak var camera: UIButton!
+    
     var imageToClassify: UIImage?
     var photos = [PhotoModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        let service = BaseService()
-        service.loadPhotos(isRandom: true, onComplete: { [weak self] (photos) in
-            self?.photos = photos
-        }) { (error) in
-            print(error.localizedDescription)
+        if !UIImagePickerController.isSourceTypeAvailable(.camera) {
+            camera.isEnabled = false
         }
-        print(self.photos.count)
     }
     
     func presentPhotoPicker(sourceType: UIImagePickerController.SourceType) {
@@ -39,17 +37,6 @@ class ViewController: UIViewController {
     
     @IBAction func uploadButton(_ sender: UIButton) {
         presentPhotoPicker(sourceType: .photoLibrary)
-    }
-    
-
-    
-    @IBAction func downloadRandomFromUnsplash(_ sender: UIButton) {
-        let model = photos[0]
-        let url = URL(string: model.urls.regular)!
-        //do loading from the given URL
-        let data = try! Data(contentsOf: url)
-        self.imageToClassify = UIImage(data: data)
-        classify()
     }
     
     func classify() {
@@ -71,12 +58,3 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         classify()
     }
 }
-
-//extension UIImageView {
-//    func loadImage(by imageURL: String) {
-//        let url = URL(string: imageURL)!
-//        //do loading from the given URL
-//        let data = try! Data(contentsOf: url)
-//        self.image = UIImage(data: data)
-//    }
-//}
