@@ -468,17 +468,6 @@
                                     <color key="textColor" red="0.12941176469999999" green="0.33333333329999998" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHc-uO-0RE">
-                                    <rect key="frame" x="-1" y="550" width="202" height="48"/>
-                                    <color key="backgroundColor" red="0.92518959499999998" green="0.94212245559999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                    <state key="normal" title="Button">
-                                        <color key="titleColor" red="0.12941176469999999" green="0.33333333329999998" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="refreshActionButton:" destination="Dbs-8A-MEP" eventType="touchUpInside" id="9xd-uG-nHg"/>
-                                    </connections>
-                                </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="X7s-wo-kpE">
                                     <rect key="frame" x="-107.5" y="374" width="415" height="300"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -498,12 +487,10 @@
                             <constraints>
                                 <constraint firstItem="Inc-S0-yfl" firstAttribute="centerX" secondItem="b9R-3G-mB5" secondAttribute="centerX" id="7fz-lg-6st"/>
                                 <constraint firstItem="Kcg-fm-qG0" firstAttribute="top" secondItem="b9R-3G-mB5" secondAttribute="top" id="CTJ-uT-bbX"/>
-                                <constraint firstItem="qHc-uO-0RE" firstAttribute="top" secondItem="dHM-In-4mF" secondAttribute="bottom" constant="300" id="M9b-0O-XFC"/>
                                 <constraint firstItem="tyJ-wY-JjL" firstAttribute="top" secondItem="Kcg-fm-qG0" secondAttribute="bottom" id="MFH-d9-ASk"/>
                                 <constraint firstItem="Kcg-fm-qG0" firstAttribute="leading" secondItem="b9R-3G-mB5" secondAttribute="leading" id="Odq-4X-Cv1"/>
                                 <constraint firstAttribute="trailing" secondItem="tyJ-wY-JjL" secondAttribute="trailing" constant="-109" id="P5J-RQ-vHd"/>
                                 <constraint firstItem="Inc-S0-yfl" firstAttribute="top" secondItem="Kcg-fm-qG0" secondAttribute="bottom" constant="310" id="Pwv-cp-R4v"/>
-                                <constraint firstItem="qHc-uO-0RE" firstAttribute="leading" secondItem="b9R-3G-mB5" secondAttribute="leading" constant="-1" id="Rb8-4B-ROY"/>
                                 <constraint firstItem="tyJ-wY-JjL" firstAttribute="leading" secondItem="b9R-3G-mB5" secondAttribute="leading" constant="-106" id="UyD-Qd-0H2"/>
                                 <constraint firstAttribute="bottom" secondItem="Kcg-fm-qG0" secondAttribute="bottom" id="Zoe-io-ePX"/>
                                 <constraint firstItem="Kcg-fm-qG0" firstAttribute="leading" secondItem="b9R-3G-mB5" secondAttribute="leading" id="a7b-pg-WC3"/>
@@ -512,7 +499,6 @@
                                 <constraint firstAttribute="trailing" secondItem="Kcg-fm-qG0" secondAttribute="trailing" id="pMu-iI-5Df"/>
                                 <constraint firstItem="dHM-In-4mF" firstAttribute="top" secondItem="Kcg-fm-qG0" secondAttribute="bottom" constant="170" id="w8q-Xt-rfS"/>
                                 <constraint firstItem="X7s-wo-kpE" firstAttribute="centerX" secondItem="b9R-3G-mB5" secondAttribute="centerX" id="wNf-48-jQq"/>
-                                <constraint firstAttribute="trailing" secondItem="qHc-uO-0RE" secondAttribute="trailing" constant="-1" id="xqr-3B-eEl"/>
                             </constraints>
                         </view>
                     </navigationItem>
@@ -521,7 +507,6 @@
                         <outlet property="noConnectionLabel" destination="dHM-In-4mF" id="rzM-sm-xih"/>
                         <outlet property="noResultImage" destination="X7s-wo-kpE" id="OID-JF-WZg"/>
                         <outlet property="noResultLabel" destination="Inc-S0-yfl" id="OcK-FS-reA"/>
-                        <outlet property="refreshButton" destination="qHc-uO-0RE" id="E8z-Lq-c7o"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHC-3H-hKw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

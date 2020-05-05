@@ -12,7 +12,6 @@ class UnsplashTableViewController: UITableViewController {
 
     @IBOutlet weak var noConnectionImage: UIImageView!
     @IBOutlet weak var noConnectionLabel: UILabel!
-    @IBOutlet weak var refreshButton: UIButton!
     
     @IBOutlet weak var noResultImage: UIImageView!
     @IBOutlet weak var noResultLabel: UILabel!
@@ -28,7 +27,6 @@ class UnsplashTableViewController: UITableViewController {
         
         noConnectionImage.isHidden = true
         noConnectionLabel.isHidden = true
-        refreshButton.isHidden = true
         
         noResultImage.isHidden = true
         noResultLabel.isHidden = true
@@ -49,11 +47,12 @@ class UnsplashTableViewController: UITableViewController {
         
         service.loadRandomPhotos(onComplete: { [weak self]  (photos) in
             self?.randomPhoto = photos[0]
+            self?.noConnectionLabel.isHidden = true
+            self?.noConnectionImage.isHidden = true
             self?.tableView.reloadData()
         }) { (error) in
             self.noConnectionLabel.isHidden = false
             self.noConnectionImage.isHidden = false
-            self.refreshButton.isHidden = false
             
             print(error.localizedDescription)
         }
@@ -63,10 +62,6 @@ class UnsplashTableViewController: UITableViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func refreshActionButton(_ sender: UIButton) {
-        loadData();
-    }
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -74,6 +69,9 @@ class UnsplashTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
+            if randomPhoto == nil {
+                return 0
+            }
             return 1
         case 1:
             return searchResult?.results?.count ?? 0
@@ -102,13 +100,8 @@ class UnsplashTableViewController: UITableViewController {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "newImageCell", for: indexPath) as! NewTableViewCell
-            if let randomPhoto = self.randomPhoto {
-                cell.newImage.loadImage(by: randomPhoto.urls.regular)
-                cell.contentMode = .scaleAspectFill
-            } else {
-                cell.newImage.image = UIImage(systemName: ".photo")
-                cell.contentMode = .scaleAspectFit
-            }
+            cell.newImage.image = UIImage(systemName: ".photo")
+            cell.contentMode = .scaleAspectFit
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "newImageCell", for: indexPath) as! NewTableViewCell
@@ -162,11 +155,13 @@ class UnsplashTableViewController: UITableViewController {
                 self?.noResultImage.isHidden = true
                 self?.noResultLabel.isHidden = true
             }
+            self?.noConnectionLabel.isHidden = true
+            self?.noConnectionImage.isHidden = true
+            
             self?.tableView.reloadData()
         }) { (error) in
             self.noConnectionLabel.isHidden = false
             self.noConnectionImage.isHidden = false
-            self.refreshButton.isHidden = false
 
             print(error.localizedDescription)
         }

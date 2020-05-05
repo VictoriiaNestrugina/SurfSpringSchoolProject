@@ -30,7 +30,9 @@ class BaseService {
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
-                onError(error)
+                DispatchQueue.main.async {
+                    onError(error)
+                }
                 return
             }
             
@@ -63,7 +65,9 @@ class BaseService {
 
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
-                onError(error)
+                DispatchQueue.main.async {
+                    onError(error)
+                }
                 return
             }
             
