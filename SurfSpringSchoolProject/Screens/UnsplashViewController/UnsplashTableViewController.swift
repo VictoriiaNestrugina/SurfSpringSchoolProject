@@ -100,8 +100,7 @@ class UnsplashTableViewController: UITableViewController {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "newImageCell", for: indexPath) as! NewTableViewCell
-            cell.newImage.image = UIImage(systemName: ".photo")
-            cell.contentMode = .scaleAspectFit
+            cell.newImage.loadImage(by: (randomPhoto?.urls.regular)!)
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "newImageCell", for: indexPath) as! NewTableViewCell
